@@ -12,6 +12,8 @@
 		A44E31FD2615290900552ABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44E31FC2615290900552ABC /* Assets.xcassets */; };
 		A44E32002615290900552ABC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44E31FF2615290900552ABC /* Preview Assets.xcassets */; };
 		A44E321026152C4C00552ABC /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E320F26152C4C00552ABC /* ContentModel.swift */; };
+		A44E3214261613C800552ABC /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A44E3212261613C800552ABC /* data.json */; };
+		A44E3215261613C800552ABC /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = A44E3213261613C800552ABC /* style.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A44E31FF2615290900552ABC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A44E32012615290900552ABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A44E320F26152C4C00552ABC /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		A44E3212261613C800552ABC /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		A44E3213261613C800552ABC /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 		A44E32082615291B00552ABC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A44E3212261613C800552ABC /* data.json */,
+				A44E3213261613C800552ABC /* style.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44E32002615290900552ABC /* Preview Assets.xcassets in Resources */,
+				A44E3214261613C800552ABC /* data.json in Resources */,
+				A44E3215261613C800552ABC /* style.html in Resources */,
 				A44E31FD2615290900552ABC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
