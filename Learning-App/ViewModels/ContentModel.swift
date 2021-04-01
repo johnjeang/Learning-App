@@ -21,6 +21,9 @@ class ContentModel: ObservableObject{
         
         // get url
         let jsonURL = Bundle.main.url(forResource: "data", withExtension: "json")
+        if jsonURL == nil{
+            print("nil URL")
+        }
     
         
         // get data object
@@ -30,12 +33,18 @@ class ContentModel: ObservableObject{
             let jsonDecoder = JSONDecoder()
             
             // decode data object
-            let modules = try jsonDecoder.decode([Module].self, from: jsonData)
+            do{
+                let modules = try jsonDecoder.decode([Module].self, from: jsonData)
+                self.modules = modules
+            }
+            catch{
+                print(error)
+            }
             
-            self.modules = modules
+
         }
         catch{
-            print("Oops, there was an error trying to parse the local data")
+            print("Oops, there was an error trying to make local data object")
         }
         
         let styleUrl = Bundle.main.url(forResource: "style", withExtension: "html")
