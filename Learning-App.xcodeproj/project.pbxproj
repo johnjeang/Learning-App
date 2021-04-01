@@ -14,6 +14,7 @@
 		A44E321026152C4C00552ABC /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E320F26152C4C00552ABC /* ContentModel.swift */; };
 		A44E3214261613C800552ABC /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A44E3212261613C800552ABC /* data.json */; };
 		A44E3215261613C800552ABC /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = A44E3213261613C800552ABC /* style.html */; };
+		A44E32182616337100552ABC /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E32172616337100552ABC /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A44E320F26152C4C00552ABC /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		A44E3212261613C800552ABC /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A44E3213261613C800552ABC /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
+		A44E32172616337100552ABC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		A44E320D26152BCF00552ABC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A44E32172616337100552ABC /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				A44E31FB2615290400552ABC /* HomeView.swift in Sources */,
 				A44E31F92615290400552ABC /* Learning_App.swift in Sources */,
 				A44E321026152C4C00552ABC /* ContentModel.swift in Sources */,
+				A44E32182616337100552ABC /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
