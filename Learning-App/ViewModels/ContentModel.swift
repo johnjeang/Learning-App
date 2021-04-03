@@ -10,6 +10,11 @@ import Foundation
 class ContentModel: ObservableObject{
     
     @Published var modules = [Module]()
+    
+    @Published var currentModule: Module?
+    
+    var currentModuleIndex = 0
+    
     var styleData: Data?
     
     init(){
@@ -64,6 +69,16 @@ class ContentModel: ObservableObject{
 
         
         
+    }
+    
+    func setCurrentModule(_ moduleid: Int){
+        for index in 0..<modules.count{
+            if(moduleid == modules[index].id){
+                currentModuleIndex = index
+                break
+            }
+        }
+        currentModule = modules[currentModuleIndex]
     }
     
 }

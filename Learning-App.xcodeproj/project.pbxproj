@@ -16,6 +16,8 @@
 		A44E321B2616439900552ABC /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E321A2616439900552ABC /* HomeViewRow.swift */; };
 		A44E32212616632100552ABC /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = A44E321F2616632100552ABC /* style.html */; };
 		A44E32222616632100552ABC /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A44E32202616632100552ABC /* data.json */; };
+		A44E32292618ADCC00552ABC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E32282618ADCC00552ABC /* ContentView.swift */; };
+		A44E322C2618BD2600552ABC /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E322B2618BD2600552ABC /* ContentViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A44E321A2616439900552ABC /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		A44E321F2616632100552ABC /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = style.html; sourceTree = "<group>"; };
 		A44E32202616632100552ABC /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		A44E32282618ADCC00552ABC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A44E322B2618BD2600552ABC /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 			children = (
 				A44E31FA2615290400552ABC /* HomeView.swift */,
 				A44E321A2616439900552ABC /* HomeViewRow.swift */,
+				A44E32282618ADCC00552ABC /* ContentView.swift */,
+				A44E322B2618BD2600552ABC /* ContentViewRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,7 +203,9 @@
 			files = (
 				A44E31FB2615290400552ABC /* HomeView.swift in Sources */,
 				A44E321B2616439900552ABC /* HomeViewRow.swift in Sources */,
+				A44E32292618ADCC00552ABC /* ContentView.swift in Sources */,
 				A44E31F92615290400552ABC /* Learning_App.swift in Sources */,
+				A44E322C2618BD2600552ABC /* ContentViewRow.swift in Sources */,
 				A44E321026152C4C00552ABC /* ContentModel.swift in Sources */,
 				A44E32182616337100552ABC /* Models.swift in Sources */,
 			);
