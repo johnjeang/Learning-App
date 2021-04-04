@@ -31,7 +31,7 @@ struct HomeView: View {
                                     })
                                 HomeViewRow(image: module.test.image, title: "Practice \(module.category)", description:  module.test.description, content:  "\(module.test.questions.count) Questions", time: module.test.time)
                             }
-                            
+                            .padding()
                             
                         }
                         

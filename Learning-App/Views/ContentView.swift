@@ -15,11 +15,19 @@ struct ContentView: View {
                 if model.currentModule != nil{
                     ForEach(0..<model.currentModule!.content.lessons.count){index in
                         // Insert call to view row
-                        ContentViewRow(index: index)
+                        NavigationLink(
+                            destination: ContentDetailView()
+                                .onAppear(perform: {
+                                    model.setCurrentLesson(index)
+                                }),
+                            label: {
+                                ContentViewRow(index: index)
+                            })
                     }
                     
                 }
             }
+            .accentColor(.black)
             .padding()
             .navigationTitle("Learn \(model.currentModule?.category ?? "")")
         }
