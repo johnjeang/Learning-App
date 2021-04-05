@@ -13,7 +13,7 @@ struct ContentDetailView: View {
     @EnvironmentObject var model: ContentModel
     
     var body: some View {
-        
+
         let lesson = model.currentLesson
         
         let url = URL(string: Constants.videoHostUrl + (lesson?.video ?? ""))
@@ -26,26 +26,38 @@ struct ContentDetailView: View {
             }
             
             // TODO Description
+            CodeTextView()
             
             
             //Button
             if model.hasNextLesson(){
                 Button(action: {model.advanceLesson()}, label: {
                     ZStack {
-                        Rectangle()
-                            .foregroundColor(.green)
+                        RectangleCard(color: Color.green)
                             .frame(height: 51)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
+
                         Text("Next Lesson: \(model.currentModule!.content.lessons[model.currentLessonIndex + 1].title)")
                             .foregroundColor(.white)
                             .bold()
                     }
                 })
             }
+            else{
+                Button(action: {model.currentContentSelected = nil}, label: {
+                    ZStack {
+                        RectangleCard(color: Color.green)
+                            .frame(height: 51)
+                        Text("Complete")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                })
+                
+            }
             
         }
         .padding()
+        .navigationBarTitle(lesson?.title ?? "")
     }
 }
 

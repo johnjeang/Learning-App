@@ -15,6 +15,12 @@ class ContentModel: ObservableObject{
     
     @Published var currentLesson: Lesson?
     
+    @Published var lessonDescription = NSAttributedString()
+    
+    @Published var currentContentSelected:Int?
+    
+    @Published var currentTestSelected:Int?
+    
     var currentLessonIndex = 0
     
     var currentModuleIndex = 0
@@ -83,6 +89,8 @@ class ContentModel: ObservableObject{
             currentLessonIndex = 0
         }
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        lessonDescription = addStyling(currentLesson!.explanation)
+        
     }
     
     func setCurrentModule(_ moduleid: Int){
@@ -103,11 +111,33 @@ class ContentModel: ObservableObject{
         currentLessonIndex += 1
         if currentLessonIndex < currentModule!.content.lessons.count{
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
+            lessonDescription = addStyling(currentLesson!.explanation)
         }
         else{
             currentLesson = nil
             currentLessonIndex = 0
         }
+    }
+    
+    private func addStyling(_ htmlString: String) -> NSAttributedString{
+        var resultString = NSAttributedString()
+        var data = Data()
+        
+        // Add style data first
+        if styleData != nil{
+            data.append(self.styleData!)
+        }
+        
+        // Add html data next
+        data.append(Data(htmlString.utf8))
+        
+        // convert to attributed string
+        
+    
+        if let attributedString = try? NSAttributedString(data: data, options: [.documentType:NSAttributedString.DocumentType.html], documentAttributes: nil){
+            resultString = attributedString
+        }
+        return resultString
     }
     
 }
